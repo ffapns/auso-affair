@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 10, 2017 8:41:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.pojo.ProjectInfo" table="project_info" catalog="ausodb" optimistic-lock="version">
+        <composite-id name="id" class="model.pojo.ProjectInfoId">
+            <key-property name="no" type="int">
+                <column name="No" />
+            </key-property>
+            <key-property name="projectId" type="string">
+                <column name="Project_ID" length="45" />
+            </key-property>
+        </composite-id>
+        <property name="proejectTitle" type="string">
+            <column name="`Proeject Title`" length="50" not-null="true" />
+        </property>
+        <property name="projectType" type="string">
+            <column name="`Project Type`" length="45" not-null="true" />
+        </property>
+        <property name="projectLevel" type="string">
+            <column name="`Project Level`" length="45" not-null="true" />
+        </property>
+        <property name="semester" type="string">
+            <column name="Semester" length="45" not-null="true" />
+        </property>
+        <property name="startdate" type="date">
+            <column name="Startdate" length="10" not-null="true" />
+        </property>
+        <property name="enddate" type="date">
+            <column name="Enddate" length="10" not-null="true" />
+        </property>
+        <property name="venueName" type="string">
+            <column name="`Venue Name`" length="45" not-null="true" />
+        </property>
+        <property name="expectedParticipant" type="string">
+            <column name="`Expected Participant`" length="45" not-null="true" />
+        </property>
+        <property name="kpi" type="string">
+            <column name="KPI" length="300" not-null="true" />
+        </property>
+        <property name="goal" type="string">
+            <column name="Goal" length="300" not-null="true" />
+        </property>
+        <property name="method" type="string">
+            <column name="Method" length="300" not-null="true" />
+        </property>
+        <property name="expectedOutcome" type="string">
+            <column name="`Expected Outcome`" length="300" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
